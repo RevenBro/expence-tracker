@@ -1,11 +1,11 @@
 import './App.css'
-import Header from './components/Header'
+import Home from './components/Home'
 
 function App() {
 
   return (
-    <div className='flex flex-col items-center mt-[30px] mb-[10px] font-[Montserrat]'>
-      <Header/>
+    <div className='flex flex-col items-center text-center mt-[30px] mb-[10px] font-[Montserrat]'>
+      <Home/>
     </div>
   )
 }
