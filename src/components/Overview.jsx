@@ -27,13 +27,13 @@ const AddTransactionComponent = ({setIsAddVisible, addTransaction}) => {
   )
 }
 
-const Overview = ({addTransaction}) => {
+const Overview = ({addTransaction, income, expense}) => {
   const [isAddVisible, setIsAddVisible] = useState(false);
 
   return (
     <div className='flex flex-col items-center m-2.5 w-full'>
       <div className='flex justify-between items-center gap-20 w-full'>
-        <span className='text-[18px]'>Balance: $10.000</span>
+        <span className='text-[18px]'>Balance: ${income - expense}</span>
         <button
           onClick={() => setIsAddVisible(!isAddVisible)}
           className='bg-black text-white hover:bg-neutral-600 py-1.5 px-2.5 rounded-[4px] cursor-pointer font-bold text-[15px]'
@@ -45,10 +45,10 @@ const Overview = ({addTransaction}) => {
       {isAddVisible && <AddTransactionComponent setIsAddVisible={setIsAddVisible} addTransaction={addTransaction}/>}
       <div className='flex flex-row gap-3 m-5 w-full justify-between'>
         <div className='flex flex-col w-[48%] rounded-[4px] border-[1px] border-solid border-[#e6e8e9] py-[15px] px-5  text-[14px]'>
-          Expense <span className={`font-bold text-[20px] text-green-500`}>$1.000</span>
+          Expense <span className={`font-bold text-[20px] text-red-500`}>${expense}</span>
         </div>
         <div className='flex flex-col rounded-[4px] border-[1px] border-solid border-[#e6e8e9] py-[15px] px-5 w-[48%] text-[14px]'>
-          Income <span className={`font-bold text-[20px] text-red-500`}>$5.000</span>
+          Income <span className={`font-bold text-[20px] text-green-500`}>${income}</span>
         </div>
       </div>
     </div>
