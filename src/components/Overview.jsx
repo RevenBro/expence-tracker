@@ -43,12 +43,12 @@ const Overview = ({addTransaction}) => {
       </div>
 
       {isAddVisible && <AddTransactionComponent setIsAddVisible={setIsAddVisible} addTransaction={addTransaction}/>}
-      <div className='flex flex-row gap-3 m-5'>
-        <div>
-          Expense <span>$1.000</span>
+      <div className='flex flex-row gap-3 m-5 w-full justify-between'>
+        <div className='flex flex-col w-[48%] rounded-[4px] border-[1px] border-solid border-[#e6e8e9] py-[15px] px-5  text-[14px]'>
+          Expense <span className={`font-bold text-[20px] text-green-500`}>$1.000</span>
         </div>
-        <div>
-          Income <span>$5.000</span>
+        <div className='flex flex-col rounded-[4px] border-[1px] border-solid border-[#e6e8e9] py-[15px] px-5 w-[48%] text-[14px]'>
+          Income <span className={`font-bold text-[20px] text-red-500`}>$5.000</span>
         </div>
       </div>
     </div>

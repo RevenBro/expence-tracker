@@ -5,7 +5,7 @@ import Transaction from "./Transaction"
 const Home = () => {
   const [transaction, setTransaction] = useState([]);
 
-  const addTransaction = () => {
+  const addTransaction = (payload) => {
     const transactionArr = [...transaction];
     transactionArr.push(payload);
     setTransaction(transactionArr);
