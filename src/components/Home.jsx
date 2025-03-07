@@ -28,8 +28,8 @@ const Home = () => {
   }, [transaction])
   return (
     <div>
-      <h1 className="text-black text-[25px] font-bold w-[360px]">Expense Tracker</h1>
-      <div className="flex flex-col items-center mt-7 mb-2.5">
+      <h1 className="text-black text-[25px] font-bold w-[360px]">Expense Tracker App</h1>
+      <div className="flex flex-col items-center mt-6 mb-2.5">
         <div>
           <Overview addTransaction={addTransaction} expense={expense} income={income}/>
           <Transaction transaction={transaction}/>
